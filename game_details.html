@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- صفحة تفاصيل اللعبة -->
+      <section id="game-details-page" class="fade-page" style="display:none; padding: 0; min-height: 100vh; background: #fff;">
+  <button class="btn back-btn-top" style="background: #6C63FF;" onclick="goBackToGames()">← Back</button>
+  <div style="padding: 24px 0 0 0; background: #fff;">
+    <div style="display: flex; align-items: center; gap: 18px; padding: 0 26px;">
+      <!-- صورة اللعبة -->
+      <img id="details-game-icon" src="" alt="Game Icon" style="width: 70px; height: 70px; border-radius: 16px; box-shadow: 0 2px 12px #0004;">
+      <div>
+        <!-- اسم اللعبة -->
+        <h2 id="details-game-title" style="color: #222; font-size: 24px; font-family: 'Cairo', 'Inter', sans-serif; font-weight: 700; margin-bottom: 4px;">اسم اللعبة</h2>
+        <!-- اسم المطور -->
+        <div style="color: #444; font-size: 15px; font-family: 'Inter',sans-serif;" id="details-game-dev">اسم المطور</div>
+      </div>
+    </div>
+    <!-- معلومات إضافية عن اللعبة -->
+    <div style="display: flex; gap: 20px; justify-content: flex-start; align-items: center; padding: 18px 26px 0 26px; margin-bottom: 6px;">
+      <div style="display:flex; align-items:center; gap:4px;">
+        <span style="color:#333; font-size:18px; font-weight:700;" id="details-game-rating">4.1</span>
+        <i class="fa fa-star" style="color:#ffc107; font-size:17px;"></i>
+        <span style="color:#666; font-size:14px; margin-left:2px;" id="details-game-reviews">(37M)</span>
+      </div>
+      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
+        <i class="fa fa-download"></i> <span id="details-game-size">120 MB</span>
+      </div>
+      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
+        <i class="fa fa-user"></i> <span id="details-game-age">7+</span>
+      </div>
+      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
+        <i class="fa fa-arrow-down"></i> <span id="details-game-downloads">1B+</span>
+      </div>
+    </div>
+    <!-- زر تحميل اللعبة -->
+    <div style="padding: 30px 26px 0 26px;">
+      <a id="details-game-download-link" href="#" target="_blank" class="btn" style="width:100%; font-size:19px; padding:13px 0; background: linear-gradient(90deg, #5b5bff, #3e3ee8); border-radius: 12px; color: #fff;">
+        تثبيت اللعبة
+      </a>
+    </div>
+  </div>
+  <!-- صور اللعبة -->
+  <div style="display:flex; gap:11px; padding: 32px 18px 0 18px; justify-content:flex-start;">
+    <img id="details-game-img1" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
+    <img id="details-game-img2" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
+    <img id="details-game-img3" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
+  </div>
+  <!-- وصف اللعبة -->
+  <div style="background: #f5f5f5; border-radius: 20px 20px 0 0; margin-top:38px; padding: 32px 20px 46px 20px;">
+    <h3 style="color: #222; font-size: 20px; font-family: 'Cairo',sans-serif; margin-bottom: 10px;">About this game</h3>
+    <div id="details-game-description" style="color:#444; font-size: 16px; font-family:'Cairo','Inter',sans-serif; line-height:1.8;">
+      <!-- يتم تعبئة وصف اللعبة هنا -->
+    </div>
+  </div>
+</section>
+</html>
