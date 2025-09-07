@@ -1,0 +1,222 @@
+ 
+    /* إعدادات أساسية للصفحة */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f1f4f9, #dde9f7);
+      color: #333;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    /* زر القائمة الثلاثي */
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: none !important;
+      border: none;
+      box-shadow: none;
+      margin: 0 0 0 16px;
+      padding: 0;
+      transition: opacity 0.2s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .menu-icon:focus { outline: none; box-shadow: none; }
+    .hide-menu-icon { opacity: 0 !important; pointer-events: none !important; }
+
+    /* الشريط الجانبي */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+      transition: left 0.3s ease;
+      z-index: 3000;
+      padding: 20px;
+    }
+
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .logo-container img {
+      height: 40px;
+      border-radius: 12px;
+      margin-right: 65px;
+    }
+    .sidebar-header .close-btn {
+      font-size: 26px;
+      cursor: pointer;
+      color: #333;
+    }
+    .sidebar ul { list-style: none; margin-top: 30px; padding: 0; }
+    .sidebar ul li { margin: 20px 0; }
+    .sidebar ul li a {
+      text-decoration: none; color: #222; font-weight: 300; font-size: 14px;
+      display: flex; align-items: center; transition: color 0.3s ease;
+    }
+    .sidebar ul li a:hover { color: #6C63FF; }
+    .sidebar ul li a i { margin-right: 10px; font-size: 16px; color: #000; }
+
+    /* البانر الرئيسي */
+    .hero { text-align: center; padding: 16px 20px 20px; }
+    .hero h1 { font-size: 28px; color: #4b41ff; font-weight: 700; }/* حاوية البطاقات */
+    .card-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+    .card {
+      background: #fff; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      max-width: 350px; width: 100%; display: flex; flex-direction: column;
+      transition: transform 0.3s ease; transform: translateZ(0); opacity: 0;
+      animation: fadeUp 0.6s ease-out forwards; will-change: transform, opacity; cursor: pointer;
+    }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .card img { width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 16px; border-top-right-radius: 16px; }
+    .card-content { padding: 20px; text-align: center; }
+    .card-content h3 { font-size: 20px; margin-bottom: 8px; font-weight: 700; }
+    .card-content p { font-size: 15px; margin-bottom: 20px; color: #666; }
+    .btn {
+      padding: 10px 20px; background: #6C63FF; color: white; border: none; border-radius: 8px;
+      cursor: pointer; font-weight: 600; text-decoration: none;
+    }
+    .back-btn-top {
+      position: absolute; top: 20px; right: 20px; font-size: 15px; padding: 6px 18px; min-width: 60px; z-index: 2;
+    }
+    @media (min-width: 900px) {
+      .card-section { flex-wrap: nowrap; justify-content: center; gap: 70px; }
+    }
+    @media (max-width: 899px) {
+      .card-section { flex-direction: column; align-items: center; }
+    }
+
+    /* التذييل */
+    .footer {
+      position: absolute; bottom: 10px; left: 0; width: 100%; text-align: center; font-size: 12px; color: #666;
+    }
+    .footer-icons { margin-bottom: 6px; }
+    .footer-icons a {
+      color: #000; margin: 0 10px; font-size: 16px; transition: transform 0.3s; position: relative; top: -4px;
+    }
+    .footer-icons a:hover { transform: scale(1.2); }
+
+    /* مؤثرات ظهور الصفحات */
+    .fade-page {
+      opacity: 0; transform: scale(0.95) translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      animation: fadeIn 0.6s ease forwards;
+    }
+    .fade-page.show { opacity: 1; transform: scale(1) translateY(0); }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    /* البطاقات على الجوال */
+    @media (max-width: 600px) {
+      #page-games .card-section {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px; justify-items: center;
+      }
+      #page-games .card { width: 98%; min-width: 0; max-width: 100%; margin-bottom: 0; }
+      .hero { padding-top: 16px; }
+      .menu-icon { margin-left: 12px; }
+    }/* تصميم بطاقات الألعاب */
+    .game-cards-container {
+      display: flex; flex-direction: column; gap: 28px; max-width: 650px; margin: 0 auto;
+    }
+    .game-card {
+      background: #fff; border-radius: 18px; box-shadow: 0 10px 32px rgba(76,100,255,0.08), 0 1.5px 3px rgba(0,0,0,0.04);
+      display: flex; align-items: flex-start; padding: 26px 22px 22px 22px; transition: box-shadow 0.25s, transform 0.25s;
+      position: relative; min-height: 120px; opacity: 0; transform: translateY(40px) scale(0.96);
+    }
+    .game-icon { width: 64px; height: 64px; border-radius: 14px; object-fit: cover; margin-top: 2px; margin-right: 18px; margin-left: 0; align-self: flex-start; box-shadow: 0 2px 10px rgba(76,100,255,0.08); }
+    .game-card-info { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+    .game-title-row { display: flex; align-items: center; margin-bottom: 10px; }
+    .game-title { font-size: 21px; font-weight: 700; color: #3A3A4A; font-family: 'Inter','Cairo',sans-serif; letter-spacing: -1px; }
+    .game-desc { font-size: 15px; color: #666; font-weight: 400; font-family: 'Inter','Cairo',sans-serif; margin-bottom: 20px; margin-top: 2px; }
+    .game-download-row { display: flex; width: 100%; justify-content: flex-end; }
+    .game-download-btn {
+      background: #6C63FF; color: #fff; font-size: 15px; font-weight: 600; border-radius: 9px; padding: 9px 28px;
+      border: none; box-shadow: 0 2px 10px rgba(108,99,255,0.09); margin-top: 0; margin-bottom: 0; margin-left: 0;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .game-download-btn:hover { background: #574fd6; box-shadow: 0 4px 18px rgba(108,99,255,0.16); }
+    .game-card.animated-in-right { animation: gameInRight 0.7s cubic-bezier(.27,.95,.52,1.19) both; }
+    .game-card.animated-in-left { animation: gameInLeft 0.7s cubic-bezier(.27,.95,.52,1.19) both; }
+    @keyframes gameInRight {
+      0% { opacity: 0; transform: translateX(80px) scale(0.96);}
+      100% { opacity: 1; transform: translateX(0) scale(1);}
+    }
+    @keyframes gameInLeft {
+      0% { opacity: 0; transform: translateX(-80px) scale(0.96);}
+      100% { opacity: 1; transform: translateX(0) scale(1);}
+    }
+    #game-search-bar-container { width: 100%; display: flex; justify-content: center; margin-bottom: 32px; }
+    #game-search-bar {
+      width: 100%; max-width: 440px; background: #fff; border-radius: 30px;
+      box-shadow: 0 3px 18px rgba(76,100,255,0.08), 0 0.5px 1px rgba(0,0,0,0.04);
+      display: flex; align-items: center; padding: 8px 20px; font-family: 'Inter','Cairo',sans-serif; position: relative; transition: box-shadow 0.2s; border: 2px solid #ecebfa;
+    }
+    #game-search-bar:focus-within {
+      border-color: #6C63FF;
+      box-shadow: 0 6px 28px rgba(76,100,255,0.11), 0 0.5px 1px rgba(0,0,0,0.04);
+    }
+    #game-search-input {
+      border: none; background: transparent; outline: none; width: 100%; font-size: 18px; padding: 10px 0 10px 0; color: #293251; font-family: inherit;
+    }
+    #game-search-input::placeholder { color: #b9b6d3; font-size: 17px; font-family: inherit; }
+    #game-search-bar i.fa-search { color: #6C63FF; margin-right: 8px; font-size: 18px; }
+    @media (max-width: 600px) {
+      .game-cards-container { gap: 18px; padding: 0 2px; }
+      .game-card { flex-direction: row; padding: 16px 8px 14px 8px; border-radius: 12px; min-height: 90px; }
+      .game-icon { width: 48px; height: 48px; border-radius: 9px; margin-right: 10px; }
+      .game-title { font-size: 16.5px; }
+      .game-desc { font-size: 13.5px; margin-bottom: 10px; }
+      .game-download-btn { font-size: 13px; padding: 7px 19px; border-radius: 7px; }
+      #game-search-bar { max-width: 99%; padding: 8px 10px; }
+    }
+    /* صفحة تفاصيل اللعبة */
+   
+      #game-details-page {
+      background: #fff !importantt;
+      min-height: 100vh;
+      z-index: 5000;
+      position: fixed;
+      left: 0; top: 0; width: 100%; height: 100%;
+      overflow-y: auto;
+      padding-bottom: 60px;
+      display: none;
+    }
+    #game-details-page.show { display: block; }#game-details-page .back-btn-top {
+      background: #25254a;
+    }
+    @media (max-width:600px) {
+      #game-details-page .back-btn-top { top: 12px; right: 10px; }
+    }
+  
