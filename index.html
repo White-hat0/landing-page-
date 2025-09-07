@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+ </head>
+  <body>
     
-  <!-- الشريط الجانبي مع الروابط -->
+  <!-- ✅ الشريط الجانبي مع الروابط -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="logo-container">
@@ -22,76 +22,100 @@
       <div class="close-btn" onclick="closeSidebar()">×</div>
     </div>
     <ul>
-      <!-- روابط التنقل الرئيسية -->
+      <!-- ✅ روابط التنقل الرئيسية -->
       <li><a href="#" onclick="goHome()"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#" onclick="openPage('about.html')"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="#" onclick="openPage('contact.html')"><i class="fas fa-envelope"></i> Contact</a></li>
-      <li><a href="#" onclick="openPage('editing.html')"><i class="fas fa-edit"></i> Editing</a></li>
-      <li><a href="#" onclick="openPage('game.html')"><i class="fas fa-gamepad"></i> Games</a></li>
-      <li><a href="#" onclick="openPage('game_details.html')"><i class="fas fa-info-circle"></i> Game Details</a></li>
+      <li><a href="#" onclick="openPage('page-about')"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#" onclick="goContact()"><i class="fas fa-envelope"></i> Contact</a></li>
+      <!-- 🔹 لإضافة صفحة جديدة هنا (مثلاً Services) انسخ السطر وغير الاسم والـ id -->
+      <!-- <li><a href="#" onclick="openPage('page-services')"><i class="fas fa-briefcase"></i> Services</a></li> -->
     </ul>
   </div>
 
-  <!-- زر القائمة الثلاثي -->
+  <!-- ✅ زر القائمة الثلاثي -->
   <div class="menu-icon" onclick="openSidebar()">&#9776;</div>
 
-  <!-- البانر الرئيسي -->
+  <!-- ✅ البانر الرئيسي -->
   <section class="hero">
     <h1>Where innovation meets your digital needs</h1>
-    <!-- عدل جملة البانر من هنا -->
+    <!-- 🔹 عدل جملة البانر من هنا -->
   </section>
 
-  <!-- بطاقات الأقسام الرئيسية -->
+  <!-- ✅ بطاقات الأقسام الرئيسية -->
   <section class="card-section">
     <!-- البطاقة الأولى -->
     <div class="card">
-      <!-- صورة البطاقة -->
       <img src="https://i.postimg.cc/zBvFg3XB/file-00000000bd4461f4a01ffb2a71df09fd-2.png.jpg" alt="Free Editing Packs">
       <div class="card-content">
-        <!-- عنوان البطاقة -->
         <h3>Free Editing Packs</h3>
-        <!-- وصف البطاقة -->
         <p>Download top-notch video editing packs to boost your creativity.</p>
-        <!-- زر البطاقة -->
-        <a href="#" class="btn" onclick="openPage('editing.html')">View Packs</a>
-        <!-- تعليق: عدل هنا محتوى البطاقة الأولى أو الصورة أو النص أو الرابط -->
+        <!-- ✅ عند الضغط يفتح الصفحة الخاصة بالـ Packs -->
+        <a href="#" class="btn" onclick="openPage('page-packs')">View Packs</a>
       </div>
     </div>
+
     <!-- البطاقة الثانية -->
     <div class="card">
       <img src="https://i.postimg.cc/3Jv0tVg8/game-icon.png" alt="Editing Apps">
       <div class="card-content">
         <h3>Editing Apps</h3>
         <p>Explore the best free apps to enhance your content production.</p>
-        <a href="#" class="btn" onclick="openPage('game.html')">View Games</a>
-        <!-- تعليق: عدل هنا محتوى البطاقة الثانية أو الصورة أو النص أو الرابط -->
+        <!-- ✅ هنا يفتح صفحة الألعاب -->
+        <a href="#" class="btn" onclick="openPage('page-games')">View Games</a>
       </div>
     </div>
+
     <!-- البطاقة الثالثة -->
     <div class="card">
       <img src="رابط_الصورة_3.jpg" alt="Transitions & Intros">
       <div class="card-content">
         <h3>Transitions & Intros</h3>
         <p>Get stylish video transitions and intros to wow your audience.</p>
-        <a href="#" class="btn" onclick="openPage('game_details.html')">View Details</a>
-        <!-- تعليق: عدل هنا محتوى البطاقة الثالثة أو الصورة أو النص أو الرابط -->
+        <!-- ✅ هنا يفتح صفحة الانتقالات -->
+        <a href="#" class="btn" onclick="openPage('page-transitions')">View Transitions</a>
       </div>
     </div>
   </section>
 
-  <!-- صفحة الانتقالات -->
-  <section id="page-Transitions" class="fade-page" style="display: none; padding: 30px; position: relative;">
+  <!-- ✅ قسم صفحة About -->
+  <section id="page-about" class="fade-page" style="display: none; padding: 30px;">
     <button class="btn back-btn-top" onclick="goHome()">← Back</button>
-    <h2 style="margin-top: 60px;">Transitions & Intros</h2>
-    <p>مقدمة وانتقالات احترافية...</p>
-    <a href="#" class="btn" onclick="openPage('game_details.html')">View Transitions</a>
-    <!-- تعليق: عدل محتوى صفحة Transitions هنا -->
+    <h2>About Page</h2>
+    <p>هنا تضع محتوى صفحة About.</p>
   </section>
 
-  <!-- التذييل -->
+  <!-- ✅ قسم صفحة Packs -->
+  <section id="page-packs" class="fade-page" style="display: none; padding: 30px;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
+    <h2>Free Editing Packs</h2>
+    <p>هنا تضع محتوى صفحة Packs.</p>
+  </section>
+
+  <!-- ✅ قسم صفحة Games -->
+  <section id="page-games" class="fade-page" style="display: none; padding: 30px;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
+    <h2>Games Page</h2>
+    <p>هنا تضع محتوى صفحة Games.</p>
+  </section>
+
+  <!-- ✅ قسم صفحة Transitions -->
+  <section id="page-transitions" class="fade-page" style="display: none; padding: 30px;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
+    <h2>Transitions & Intros</h2>
+    <p>هنا تضع محتوى صفحة Transitions.</p>
+  </section>
+
+  <!-- 🔹 لإضافة أي صفحة جديدة انسخ هذا النموذج وعدل الاسم -->
+  <!--
+  <section id="page-services" class="fade-page" style="display: none; padding: 30px;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
+    <h2>Services</h2>
+    <p>هنا تضع محتوى صفحة جديدة.</p>
+  </section>
+  -->
+
+  <!-- ✅ التذييل -->
   <div class="footer">
     <div class="footer-icons">
-      <!-- روابط تواصل اجتماعي (عدل الروابط هنا) -->
       <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <a href="https://t.me/username" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
       <a href="https://www.tiktok.com/@username" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
