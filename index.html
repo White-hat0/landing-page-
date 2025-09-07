@@ -33,35 +33,109 @@
     </ul>
   </div>
 
-  <!-- ✅ زر القائمة الثلاثي -->
+<!-- صفحة Contact -->
+    <section id="page-contact" class="fade-page" style="display: none; padding: 30px;">
+      <h2>Contact Us</h2>
+      <p>You can contact us via WhatsApp, Telegram, or TikTok using the icons below.</p>
+      <!-- عدل محتوى صفحة Contact هنا -->
+    </section>
+  </div>
+  <!-- زر القائمة الثلاثي -->
   <div class="menu-icon" onclick="openSidebar()">&#9776;</div>
-
-  <!-- ✅ البانر الرئيسي -->
+  <!-- البانر الرئيسي -->
   <section class="hero">
     <h1>Where innovation meets your digital needs</h1>
-    <!-- 🔹 عدل جملة البانر من هنا -->
+    <!-- عدل جملة البانر من هنا -->
   </section>
-
-  <!-- ✅ بطاقات الأقسام الرئيسية -->
+  <!-- صفحة About -->
+  <section id="page-about" class="fade-page" style="display: none; padding: 30px;">
+    <h2>About MediaFox</h2>
+    <p>
+      Welcome to <strong style="color: #4a00e0;">MediaFox</strong> – your go-to destination for free, high-quality resources for content creators, designers, and video editors.
+    </p>
+    <p style="margin-top: 1rem;">
+      Our mission is to empower creators, freelancers, and professionals with access to the best tools without breaking the bank.
+    </p>
+    <p style="margin-top: 1rem;">
+      At MediaFox, we believe that powerful tools should be accessible to everyone. Whether you're working on a YouTube video, a design project, or a client presentation, we’ve got your back.
+    </p>
+    <button class="btn" onclick="goHome()">← Back</button>
+    <!-- عدل محتوى صفحة About هنا -->
+  </section>
+  <!-- بطاقات الأقسام الرئيسية -->
   <section class="card-section">
     <!-- البطاقة الأولى -->
     <div class="card">
+      <!-- صورة البطاقة -->
       <img src="https://i.postimg.cc/zBvFg3XB/file-00000000bd4461f4a01ffb2a71df09fd-2.png.jpg" alt="Free Editing Packs">
       <div class="card-content">
+        <!-- عنوان البطاقة -->
         <h3>Free Editing Packs</h3>
+        <!-- وصف البطاقة -->
         <p>Download top-notch video editing packs to boost your creativity.</p>
-        <!-- ✅ عند الضغط يفتح الصفحة الخاصة بالـ Packs -->
-        <a href="#" class="btn" onclick="openPage('page-packs')">View Packs</a>
+        <!-- زر البطاقة -->
+        <a href="#" class="btn" onclick="openPage('page-Packs')">View Packs</a>
+        <!-- تعليق: عدل هنا محتوى البطاقة الأولى أو الصورة أو النص أو الرابط -->
       </div>
     </div>
-
     <!-- البطاقة الثانية -->
     <div class="card">
       <img src="https://i.postimg.cc/3Jv0tVg8/game-icon.png" alt="Editing Apps">
       <div class="card-content">
         <h3>Editing Apps</h3>
-        <p>
-             <!-- صفحة الألعاب -->
+        <p>Explore the best free apps to enhance your content production.</p>
+        <a href="#" class="btn" onclick="openPage('page-games')">View Games</a>
+        <!-- تعليق: عدل هنا محتوى البطاقة الثانية أو الصورة أو النص أو الرابط -->
+      </div>
+    </div>
+    <!-- البطاقة الثالثة -->
+    <div class="card">
+      <img src="رابط_الصورة_3.jpg" alt="Transitions & Intros">
+      <div class="card-content">
+        <h3>Transitions & Intros</h3>
+        <p>Get stylish video transitions and intros to wow your audience.</p>
+        <a href="#" class="btn" onclick="openPage('page-transitions')">View-transitions</a>
+        <!-- تعليق: عدل هنا محتوى البطاقة الثالثة أو الصورة أو النص أو الرابط -->
+      </div>
+    </div>
+  </section>
+  <!-- صفحة الحزم -->
+  <section id="page-Packs" class="fade-page" style="display: none; padding: 30px; position: relative;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button><h2 style="margin-top: 60px;">Free Editing Packs</h2>
+    <div class="card-section">
+      <!-- بطاقة الحزمة الأولى -->
+      <div class="card">
+        <img src="https://i.postimg.cc/VsL3wR6q/pack1.jpg" alt="Pack 1">
+        <div class="card-content">
+          <h3>Transition Pack</h3>
+          <p>High-quality transitions for Premiere Pro.</p>
+          <a href="https://example.com/download1" class="btn" target="_blank">Download</a>
+          <!-- تعليق: عدل اسم أو صورة أو وصف أو رابط الحزمة الأولى هنا -->
+        </div>
+      </div>
+      <!-- بطاقة الحزمة الثانية -->
+      <div class="card">
+        <img src="https://i.postimg.cc/wB7NYv9D/pack2.jpg" alt="Pack 2">
+        <div class="card-content">
+          <h3>Color Grading Pack</h3>
+          <p>LUTs for cinematic video editing.</p>
+          <a href="https://example.com/download2" class="btn" target="_blank">Download</a>
+          <!-- تعليق: عدل اسم أو صورة أو وصف أو رابط الحزمة الثانية هنا -->
+        </div>
+      </div>
+      <!-- بطاقة الحزمة الثالثة -->
+      <div class="card">
+        <img src="https://i.postimg.cc/yxMQTH06/pack3.jpg" alt="Pack 3">
+        <div class="card-content">
+          <h3>Sound FX Pack</h3>
+          <p>Royalty-free sound effects for edits.</p>
+          <a href="https://example.com/download3" class="btn" target="_blank">Download</a>
+          <!-- تعليق: عدل اسم أو صورة أو وصف أو رابط الحزمة الثالثة هنا -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- صفحة الألعاب -->
   <section id="page-games" class="fade-page" style="display: none; padding: 30px; position: relative;">
     <button class="btn back-btn-top" onclick="goHome()">← Back</button>
     <h2 style="text-align:center; color:#4b41ff; margin-bottom:20px; margin-top: 60px; font-family:'Inter','Cairo',sans-serif;">Games Collection</h2>
@@ -134,64 +208,70 @@
     <!-- نتائج البحث تظهر هنا -->
     <div class="game-cards-container" id="search-game-cards" style="display:none"></div>
   </section>
-        </p>
-        <!-- ✅ هنا يفتح صفحة الألعاب -->
-        <a href="#" class="btn" onclick="openPage('page-games')">View Games</a>
+  <!-- صفحة الانتقالات -->
+  <section id="page-Transitions" class="fade-page" style="display: none; padding: 30px; position: relative;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
+    <h2 style="margin-top: 60px;">Transitions & Intros</h2>
+    <p>مقدمة وانتقالات احترافية...</p>
+    <a href="#" class="btn" onclick="openPage('page-Transitions')">View Transitions</a>
+    <!-- تعليق: عدل محتوى صفحة Transitions هنا -->
+  </section>
+  <!-- صفحة تفاصيل اللعبة -->
+      <section id="game-details-page" class="fade-page" style="display:none; padding: 0; min-height: 100vh; background: #fff;">
+  <button class="btn back-btn-top" style="background: #6C63FF;" onclick="goBackToGames()">← Back</button>
+  <div style="padding: 24px 0 0 0; background: #fff;">
+    <div style="display: flex; align-items: center; gap: 18px; padding: 0 26px;">
+      <!-- صورة اللعبة -->
+      <img id="details-game-icon" src="" alt="Game Icon" style="width: 70px; height: 70px; border-radius: 16px; box-shadow: 0 2px 12px #0004;">
+      <div>
+        <!-- اسم اللعبة -->
+        <h2 id="details-game-title" style="color: #222; font-size: 24px; font-family: 'Cairo', 'Inter', sans-serif; font-weight: 700; margin-bottom: 4px;">اسم اللعبة</h2>
+        <!-- اسم المطور -->
+        <div style="color: #444; font-size: 15px; font-family: 'Inter',sans-serif;" id="details-game-dev">اسم المطور</div>
       </div>
     </div>
-
-    <!-- البطاقة الثالثة -->
-    <div class="card">
-      <img src="رابط_الصورة_3.jpg" alt="Transitions & Intros">
-      <div class="card-content">
-        <h3>Transitions & Intros</h3>
-        <p>Get stylish video transitions and intros to wow your audience.</p>
-        <!-- ✅ هنا يفتح صفحة الانتقالات -->
-        <a href="#" class="btn" onclick="openPage('page-transitions')">View Transitions</a>
+    <!-- معلومات إضافية عن اللعبة -->
+    <div style="display: flex; gap: 20px; justify-content: flex-start; align-items: center; padding: 18px 26px 0 26px; margin-bottom: 6px;">
+      <div style="display:flex; align-items:center; gap:4px;">
+        <span style="color:#333; font-size:18px; font-weight:700;" id="details-game-rating">4.1</span>
+        <i class="fa fa-star" style="color:#ffc107; font-size:17px;"></i>
+        <span style="color:#666; font-size:14px; margin-left:2px;" id="details-game-reviews">(37M)</span>
+      </div>
+      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
+        <i class="fa fa-download"></i> <span id="details-game-size">120 MB</span>
+      </div>
+      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
+        <i class="fa fa-user"></i> <span id="details-game-age">7+</span>
+      </div>
+      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
+        <i class="fa fa-arrow-down"></i> <span id="details-game-downloads">1B+</span>
       </div>
     </div>
-  </section>
-
-  <!-- ✅ قسم صفحة About -->
-  <section id="page-about" class="fade-page" style="display: none; padding: 30px;">
-    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
-    <h2>About Page</h2>
-    <p>هنا تضع محتوى صفحة About.</p>
-  </section>
-
-  <!-- ✅ قسم صفحة Packs -->
-  <section id="page-packs" class="fade-page" style="display: none; padding: 30px;">
-    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
-    <h2>Free Editing Packs</h2>
-    <p>هنا تضع محتوى صفحة Packs.</p>
-  </section>
-
-  <!-- ✅ قسم صفحة Games -->
-  <section id="page-games" class="fade-page" style="display: none; padding: 30px;">
-    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
-    <h2>Games Page</h2>
-    <p>هنا تضع محتوى صفحة Games.</p>
-  </section>
-
-  <!-- ✅ قسم صفحة Transitions -->
-  <section id="page-transitions" class="fade-page" style="display: none; padding: 30px;">
-    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
-    <h2>Transitions & Intros</h2>
-    <p>هنا تضع محتوى صفحة Transitions.</p>
-  </section>
-
-  <!-- 🔹 لإضافة أي صفحة جديدة انسخ هذا النموذج وعدل الاسم -->
-  <!--
-  <section id="page-services" class="fade-page" style="display: none; padding: 30px;">
-    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
-    <h2>Services</h2>
-    <p>هنا تضع محتوى صفحة جديدة.</p>
-  </section>
-  -->
-
-  <!-- ✅ التذييل -->
+    <!-- زر تحميل اللعبة -->
+    <div style="padding: 30px 26px 0 26px;">
+      <a id="details-game-download-link" href="#" target="_blank" class="btn" style="width:100%; font-size:19px; padding:13px 0; background: linear-gradient(90deg, #5b5bff, #3e3ee8); border-radius: 12px; color: #fff;">
+        تثبيت اللعبة
+      </a>
+    </div>
+  </div>
+  <!-- صور اللعبة -->
+  <div style="display:flex; gap:11px; padding: 32px 18px 0 18px; justify-content:flex-start;">
+    <img id="details-game-img1" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
+    <img id="details-game-img2" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
+    <img id="details-game-img3" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
+  </div>
+  <!-- وصف اللعبة -->
+  <div style="background: #f5f5f5; border-radius: 20px 20px 0 0; margin-top:38px; padding: 32px 20px 46px 20px;">
+    <h3 style="color: #222; font-size: 20px; font-family: 'Cairo',sans-serif; margin-bottom: 10px;">About this game</h3>
+    <div id="details-game-description" style="color:#444; font-size: 16px; font-family:'Cairo','Inter',sans-serif; line-height:1.8;">
+      <!-- يتم تعبئة وصف اللعبة هنا -->
+    </div>
+  </div>
+</section>
+  <!-- التذييل -->
   <div class="footer">
     <div class="footer-icons">
+      <!-- روابط تواصل اجتماعي (عدل الروابط هنا) -->
       <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <a href="https://t.me/username" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
       <a href="https://www.tiktok.com/@username" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
