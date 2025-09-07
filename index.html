@@ -9,24 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
- </head>
-  <body>
-    <head>
-      <nav>
-        <ul>
-      <!-- روابط التنقل الرئيسية -->
-      <li><a href="#" onclick="goHome()"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#" onclick="openPage('page-about')"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="#" onclick="goContact()"><i class="fas fa-envelope"></i> Contact</a></li>
-       </ul>
-  
-        <a herf="about.html">About  </a>
-        <a herf="contact.html">Contact </a>
-        <a herf="about.html">about </a>
-        <a herf="about.html">about </a>
-        <a herf="about.html">about </a>
-      </nav>
-    </head>
+</head>
+<body>
+    
   <!-- الشريط الجانبي مع الروابط -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
@@ -39,17 +24,23 @@
     <ul>
       <!-- روابط التنقل الرئيسية -->
       <li><a href="#" onclick="goHome()"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#" onclick="openPage('page-about')"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="#" onclick="goContact()"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="#" onclick="openPage('about.html')"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#" onclick="openPage('contact.html')"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="#" onclick="openPage('editing.html')"><i class="fas fa-edit"></i> Editing</a></li>
+      <li><a href="#" onclick="openPage('game.html')"><i class="fas fa-gamepad"></i> Games</a></li>
+      <li><a href="#" onclick="openPage('game_details.html')"><i class="fas fa-info-circle"></i> Game Details</a></li>
     </ul>
   </div>
+
   <!-- زر القائمة الثلاثي -->
   <div class="menu-icon" onclick="openSidebar()">&#9776;</div>
+
   <!-- البانر الرئيسي -->
   <section class="hero">
     <h1>Where innovation meets your digital needs</h1>
     <!-- عدل جملة البانر من هنا -->
   </section>
+
   <!-- بطاقات الأقسام الرئيسية -->
   <section class="card-section">
     <!-- البطاقة الأولى -->
@@ -62,7 +53,7 @@
         <!-- وصف البطاقة -->
         <p>Download top-notch video editing packs to boost your creativity.</p>
         <!-- زر البطاقة -->
-        <a href="#" class="btn" onclick="openPage('page-Packs')">View Packs</a>
+        <a href="#" class="btn" onclick="openPage('editing.html')">View Packs</a>
         <!-- تعليق: عدل هنا محتوى البطاقة الأولى أو الصورة أو النص أو الرابط -->
       </div>
     </div>
@@ -72,7 +63,7 @@
       <div class="card-content">
         <h3>Editing Apps</h3>
         <p>Explore the best free apps to enhance your content production.</p>
-        <a href="#" class="btn" onclick="openPage('page-games')">View Games</a>
+        <a href="#" class="btn" onclick="openPage('game.html')">View Games</a>
         <!-- تعليق: عدل هنا محتوى البطاقة الثانية أو الصورة أو النص أو الرابط -->
       </div>
     </div>
@@ -82,19 +73,21 @@
       <div class="card-content">
         <h3>Transitions & Intros</h3>
         <p>Get stylish video transitions and intros to wow your audience.</p>
-        <a href="#" class="btn" onclick="openPage('page-transitions')">View-transitions</a>
+        <a href="#" class="btn" onclick="openPage('game_details.html')">View Details</a>
         <!-- تعليق: عدل هنا محتوى البطاقة الثالثة أو الصورة أو النص أو الرابط -->
       </div>
     </div>
   </section>
+
   <!-- صفحة الانتقالات -->
   <section id="page-Transitions" class="fade-page" style="display: none; padding: 30px; position: relative;">
     <button class="btn back-btn-top" onclick="goHome()">← Back</button>
     <h2 style="margin-top: 60px;">Transitions & Intros</h2>
     <p>مقدمة وانتقالات احترافية...</p>
-    <a href="#" class="btn" onclick="openPage('page-Transitions')">View Transitions</a>
+    <a href="#" class="btn" onclick="openPage('game_details.html')">View Transitions</a>
     <!-- تعليق: عدل محتوى صفحة Transitions هنا -->
   </section>
+
   <!-- التذييل -->
   <div class="footer">
     <div class="footer-icons">
@@ -105,7 +98,7 @@
     </div>
     <p>© 2025 Free Resources. All rights reserved.</p>
   </div>
-    <script src="script.js"></script>
-    </body>
+
+  <script src="script.js"></script>
+</body>
 </html>
- 
