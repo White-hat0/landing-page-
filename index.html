@@ -8,11 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
- </head>
-  <body>
-    
-  <!-- ✅ الشريط الجانبي مع الروابط -->
+  </head>
+<body>
+  <!-- الشريط الجانبي مع الروابط -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="logo-container">
@@ -22,18 +20,12 @@
       <div class="close-btn" onclick="closeSidebar()">×</div>
     </div>
     <ul>
-      <!-- ✅ روابط التنقل الرئيسية -->
-      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="#games"><i class="fas fa-gamepad"></i> Games</a></li>
-      <li><a href="#packs"><i class="fas fa-box"></i> Packs</a></li>
-      <li><a href="#transitions"><i class="fas fa-film"></i> Transitions</a></li>
-      <!-- 🔹 لإضافة صفحة جديدة هنا (مثلاً Services) انسخ السطر وغير الاسم والـ id -->
-      <!-- <li><a href="#" onclick="openPage('page-services')"><i class="fas fa-briefcase"></i> Services</a></li> -->
+      <!-- روابط التنقل الرئيسية -->
+      <li><a href="#" onclick="goHome()"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#" onclick="openPage('page-about')"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#" onclick="goContact()"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
-  </div>
-
-<!-- صفحة Contact -->
+    <!-- صفحة Contact -->
     <section id="page-contact" class="fade-page" style="display: none; padding: 30px;">
       <h2>Contact Us</h2>
       <p>You can contact us via WhatsApp, Telegram, or TikTok using the icons below.</p>
@@ -278,7 +270,3 @@
     </div>
     <p>© 2025 Free Resources. All rights reserved.</p>
   </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
