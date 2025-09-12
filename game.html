@@ -11,8 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   </head>
 <body>
-    <section>
-<!-- بطاقات الألعاب (يمكنك إضافة أو تعديل أي بطاقة لعبة) -->
+    <section id="page-games" class="fade-page" style="display: none; padding: 30px; position: relative;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
+    <h2 style="text-align:center; color:#4b41ff; margin-bottom:20px; margin-top: 60px; font-family:'Inter','Cairo',sans-serif;">Games Collection</h2>
+    <div id="game-search-bar-container">
+      <form id="game-search-bar" autocomplete="off" onsubmit="event.preventDefault();">
+        <i class="fas fa-search"></i>
+        <input type="text" id="game-search-input" placeholder="Search for a game by name..." />
+      </form>
+    </div>
+    <!-- بطاقات الألعاب (يمكنك إضافة أو تعديل أي بطاقة لعبة) -->
     <div class="game-cards-container" id="all-game-cards">
       <!-- مثال على بطاقة لعبة 1 -->
       <div class="game-card" data-title="Subway Surfers">
@@ -74,6 +82,14 @@
     </div>
     <!-- نتائج البحث تظهر هنا -->
     <div class="game-cards-container" id="search-game-cards" style="display:none"></div>
+  </section>
+  <!-- صفحة الانتقالات -->
+  <section id="page-Transitions" class="fade-page" style="display: none; padding: 30px; position: relative;">
+    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
+    <h2 style="margin-top: 60px;">Transitions & Intros</h2>
+    <p>مقدمة وانتقالات احترافية...</p>
+    <a href="#" class="btn" onclick="openPage('page-Transitions')">View Transitions</a>
+    <!-- تعليق: عدل محتوى صفحة Transitions هنا -->
   </section>
 </body>
 </html>
