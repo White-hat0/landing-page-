@@ -1,4 +1,4 @@
-  function openSidebar() {
+function openSidebar() {
     document.getElementById('sidebar').style.left = '0';
     document.querySelector('.menu-icon').classList.add('hide-menu-icon');
   }
@@ -47,20 +47,6 @@
     closeSidebar();
     window.open('https://wa.me/1234567890', '_blank');
   }
-function showPageFromHash() {
-  const hash = window.location.hash.substring(1); // يشيل #
-  if (!hash || hash === "home") {
-    goHome();
-  } else {
-    openPage("page-" + hash);
-  }
-}
-
-// لما يتغير الهاش (الرابط بعد #)
-window.addEventListener("hashchange", showPageFromHash);
-
-// لما يفتح الموقع أول مرة
-window.addEventListener("load", showPageFromHash);
   // حركة بطاقات الألعاب عند الظهور
   function animateGameCardsOnScroll() {
     const cards = document.querySelectorAll('.game-card');
