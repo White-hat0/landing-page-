@@ -1,53 +1,35 @@
-// الشريط الجانبي
-function openSidebar() {
-  document.getElementById('sidebar').style.left = '0';
-  document.querySelector('.menu-icon').classList.add('hide-menu-icon');
-}
-function closeSidebar() {
-  document.getElementById('sidebar').style.left = '-250px';
-  document.querySelector('.menu-icon').classList.remove('hide-menu-icon');
-}
-
-// بحث الألعاب (خاص بصفحة الألعاب فقط)
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('game-search-input');
-  const allCardsContainer = document.getElementById('all-game-cards');
-  const searchCardsContainer = document.getElementById('search-game-cards');
-
-  // عند تحميل الصفحة: أظهر كل البطاقات وأخفي نتائج البحث
-  if (allCardsContainer) {
-    allCardsContainer.style.display = 'flex';
-  }
-  if (searchCardsContainer) {
-    searchCardsContainer.style.display = 'none';
-  }
-
-  if (searchInput && allCardsContainer && searchCardsContainer) {
-    searchInput.addEventListener('input', function(e) {
-      const query = e.target.value.trim().toLowerCase();
-      const cards = Array.from(allCardsContainer.querySelectorAll('.game-card'));
-
-      if (!query) {
-        // إذا لم يكن هناك بحث، أظهر كل البطاقات الأصلية وأخفي نتائج البحث
-        allCardsContainer.style.display = 'flex';
-        searchCardsContainer.style.display = 'none';
-        cards.forEach(card => card.style.display = '');
-        return;
-      }
-
-      // عند البحث، أظهر فقط البطاقات المطابقة في search-game-cards
-      const foundCards = cards.filter(card => card.getAttribute('data-title').toLowerCase().includes(query));
-      if (foundCards.length === 0) {
-        searchCardsContainer.innerHTML = '<div style="padding:40px 0;text-align:center;color:#888;font-size:17px;">No games found</div>';
-      } else {
-        searchCardsContainer.innerHTML = '';
-        foundCards.forEach(card => {
-          const clone = card.cloneNode(true);
-          searchCardsContainer.appendChild(clone);
-        });
-      }
-      allCardsContainer.style.display = 'none';
-      searchCardsContainer.style.display = 'flex';
-    });
-  }
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subway Surfers | Game Details</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <button class="btn back-btn-top" onclick="window.location.href='games.html'">← Back to Games</button>
+  <section style="padding: 40px 10px 10px 10px; max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <img src="https://play-lh.googleusercontent.com/2hJxJv7Grj1qMTKZr9fE1k6wQF2lE6S3_7eB3oKQw9RjKZkEEhdnQd3fWn1kbr8F9w=w240-h480-rw" alt="Game Icon" style="width: 70px; height: 70px;">
+      <div>
+        <h2>Subway Surfers</h2>
+        <div>SYBO Games</div>
+      </div>
+    </div>
+    <div>
+      <span>4.1</span> ★ <span>(37M)</span> | <span>120 MB</span> | <span>7+</span> | <span>1B+</span>
+    </div>
+    <div>
+      <a href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf" target="_blank" class="btn">تثبيت اللعبة</a>
+    </div>
+    <!-- صور ووصف اللعبة -->
+    <div>
+      <h3>About this game</h3>
+      <div>
+        Subway Surfers is an endless runner mobile game. Run, dodge obstacles, collect coins, and unlock new characters in the world's most popular endless runner!
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
