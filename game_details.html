@@ -3,67 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>game details</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- خطوط Google Fonts -->
+  <title>MediaFox | Games</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  </head>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-
-<!-- صفحة تفاصيل اللعبة -->
-      <section id="game-details-page" class="fade-page" style="display:none; padding: 0; min-height: 100vh; background: #fff;">
-  <button class="btn back-btn-top" style="background: #6C63FF;" onclick="goBackToGames()">← Back</button>
-  <div style="padding: 24px 0 0 0; background: #fff;">
-    <div style="display: flex; align-items: center; gap: 18px; padding: 0 26px;">
-      <!-- صورة اللعبة -->
-      <img id="details-game-icon" src="" alt="Game Icon" style="width: 70px; height: 70px; border-radius: 16px; box-shadow: 0 2px 12px #0004;">
-      <div>
-        <!-- اسم اللعبة -->
-        <h2 id="details-game-title" style="color: #222; font-size: 24px; font-family: 'Cairo', 'Inter', sans-serif; font-weight: 700; margin-bottom: 4px;">اسم اللعبة</h2>
-        <!-- اسم المطور -->
-        <div style="color: #444; font-size: 15px; font-family: 'Inter',sans-serif;" id="details-game-dev">اسم المطور</div>
+  <!-- الشريط الجانبي مكرر كما في index.html -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-container">
+        <img src="https://i.postimg.cc/3r0JD7Fh/IMG-20250610-102321.png" alt="Media Fox Logo">
       </div>
+      <div class="close-btn" onclick="closeSidebar()">×</div>
     </div>
-    <!-- معلومات إضافية عن اللعبة -->
-    <div style="display: flex; gap: 20px; justify-content: flex-start; align-items: center; padding: 18px 26px 0 26px; margin-bottom: 6px;">
-      <div style="display:flex; align-items:center; gap:4px;">
-        <span style="color:#333; font-size:18px; font-weight:700;" id="details-game-rating">4.1</span>
-        <i class="fa fa-star" style="color:#ffc107; font-size:17px;"></i>
-        <span style="color:#666; font-size:14px; margin-left:2px;" id="details-game-reviews">(37M)</span>
-      </div>
-      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
-        <i class="fa fa-download"></i> <span id="details-game-size">120 MB</span>
-      </div>
-      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
-        <i class="fa fa-user"></i> <span id="details-game-age">7+</span>
-      </div>
-      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
-        <i class="fa fa-arrow-down"></i> <span id="details-game-downloads">1B+</span>
-      </div>
-    </div>
-    <!-- زر تحميل اللعبة -->
-    <div style="padding: 30px 26px 0 26px;">
-      <a id="details-game-download-link" href="#" target="_blank" class="btn" style="width:100%; font-size:19px; padding:13px 0; background: linear-gradient(90deg, #5b5bff, #3e3ee8); border-radius: 12px; color: #fff;">
-        تثبيت اللعبة
-      </a>
-    </div>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="packs.html"><i class="fas fa-box"></i> Packs</a></li>
+      <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+      <li><a href="transitions.html"><i class="fas fa-film"></i> Transitions</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
   </div>
-  <!-- صور اللعبة -->
-  <div style="display:flex; gap:11px; padding: 32px 18px 0 18px; justify-content:flex-start;">
-    <img id="details-game-img1" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
-    <img id="details-game-img2" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
-    <img id="details-game-img3" src="" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px; box-shadow: 0 2px 12px #0002;">
+  <div class="menu-icon" onclick="openSidebar()">&#9776;</div>
+  <section class="hero">
+    <h1>Games Collection</h1>
+  </section>
+  <!-- شريط البحث -->
+  <div id="game-search-bar-container">
+    <form id="game-search-bar" autocomplete="off" onsubmit="event.preventDefault();">
+      <i class="fas fa-search"></i>
+      <input type="text" id="game-search-input" placeholder="Search for a game by name..." />
+    </form>
   </div>
-  <!-- وصف اللعبة -->
-  <div style="background: #f5f5f5; border-radius: 20px 20px 0 0; margin-top:38px; padding: 32px 20px 46px 20px;">
-    <h3 style="color: #222; font-size: 20px; font-family: 'Cairo',sans-serif; margin-bottom: 10px;">About this game</h3>
-    <div id="details-game-description" style="color:#444; font-size: 16px; font-family:'Cairo','Inter',sans-serif; line-height:1.8;">
-      <!-- يتم تعبئة وصف اللعبة هنا -->
+  <!-- قائمة الألعاب: أضف لعبة جديدة بنسخ div التالي وتغيير البيانات -->
+  <div class="game-cards-container" id="all-game-cards">
+    <!-- لعبة: Subway Surfers -->
+    <div class="game-card" data-title="Subway Surfers">
+      <img class="game-icon" src="https://play-lh.googleusercontent.com/2hJxJv7Grj1qMTKZr9fE1k6wQF2lE6S3_7eB3oKQw9RjKZkEEhdnQd3fWn1kbr8F9w=w240-h480-rw" alt="Subway Surfers">
+      <div class="game-card-info">
+        <div class="game-title-row">
+          <span class="game-title">Subway Surfers</span>
+        </div>
+        <div class="game-desc">
+          Endless runner game! Run, dash, dodge and have fun in Subway Surfers.
+        </div>
+        <div class="game-download-row">
+          <!-- رابط صفحة تفاصيل اللعبة -->
+          <a href="game-subway-surfers.html" class="btn game-download-btn">Details & Download</a>
+        </div>
+      </div>
     </div>
+    <!-- لعبة 2: انسخ وغير البيانات -->
+    <div class="game-card" data-title="Game Name 2">
+      <img class="game-icon" src="https://i.postimg.cc/7hF6wK4P/game2.png" alt="Game 2 Icon">
+      <div class="game-card-info">
+        <div class="game-title-row">
+          <span class="game-title">Game Name 2</span>
+        </div>
+        <div class="game-desc">Enjoy the thrill of Game 2, packed with action and adventure.</div>
+        <div class="game-download-row">
+          <a href="game-name2.html" class="btn game-download-btn">Details & Download</a>
+        </div>
+      </div>
+    </div>
+    <!-- أضف ألعاب أخرى بنفس الشكل -->
   </div>
-</section>
+  <!-- نتائج البحث ستظهر هنا (يملؤها جافاسكريبت) -->
+  <div class="game-cards-container" id="search-game-cards" style="display:none"></div>
+  <div class="footer">
+    <div class="footer-icons">
+      <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/username" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://www.tiktok.com/@username" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p>© 2025 Free Resources. All rights reserved.</p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
-
