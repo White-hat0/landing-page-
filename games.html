@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MediaFox | Games</title>
+  <!-- Google Fonts and FontAwesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- الشريط الجانبي مكرر كما في index.html -->
+  <!-- الشريط الجانبي -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="logo-container">
@@ -27,79 +29,50 @@
       <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </div>
- <!-- صفحة الألعاب -->
-  <section id="page-games" class="fade-page" style="display: none; padding: 30px; position: relative;">
-    <button class="btn back-btn-top" onclick="goHome()">← Back</button>
-    <h2 style="text-align:center; color:#4b41ff; margin-bottom:20px; margin-top: 60px; font-family:'Inter','Cairo',sans-serif;">Games Collection</h2>
-    <div id="game-search-bar-container">
-      <form id="game-search-bar" autocomplete="off" onsubmit="event.preventDefault();">
-        <i class="fas fa-search"></i>
-        <input type="text" id="game-search-input" placeholder="Search for a game by name..." />
-      </form>
-    </div>
-    <!-- بطاقات الألعاب (يمكنك إضافة أو تعديل أي بطاقة لعبة) -->
-    <div class="game-cards-container" id="all-game-cards">
-      <!-- مثال على بطاقة لعبة 1 -->
-      <div class="game-card" data-title="Subway Surfers">
-        <img class="game-icon" src="https://play-lh.googleusercontent.com/2hJxJv7Grj1qMTKZr9fE1k6wQF2lE6S3_7eB3oKQw9RjKZkEEhdnQd3fWn1kbr8F9w=w240-h480-rw" alt="Subway Surfers">
-        <div class="game-card-info">
-          <div class="game-title-row">
-            <span class="game-title">Subway Surfers</span>
-          </div>
-          <div class="game-desc">
-            Endless runner game! Run, dash, dodge and have fun in Subway Surfers.
-          </div>
-          <div class="game-download-row">
-            <a href="game-subway-surfers.html" class="btn game-download-btn">Details & Download</a>
-          </div>
-          <!-- تعليق: عدل اسم اللعبة أو الصورة أو الوصف أو الدالة هنا -->
-        </div>
-      </div>
-      <!-- مثال على بطاقة لعبة 2 -->
-      <div class="game-card" data-title="Game Name 2">
-        <img class="game-icon" src="https://i.postimg.cc/7hF6wK4P/game2.png" alt="Game 2 Icon">
-        <div class="game-card-info">
-          <div class="game-title-row">
-            <span class="game-title">Game Name 2</span>
-          </div>
-          <div class="game-desc">Enjoy the thrill of Game 2, packed with action and adventure for hours of entertainment.</div>
-          <div class="game-download-row">
-            <a href="#" class="btn game-download-btn" onclick="showGameDetails(game2Data); return false;">Download</a>
-          </div>
-          <!-- تعليق: عدل اسم اللعبة أو الصورة أو الوصف أو الدالة هنا -->
-        </div>
-      </div>
-      <!-- مثال على بطاقة لعبة 3 -->
-      <div class="game-card" data-title="Game Name 3">
-        <img class="game-icon" src="https://i.postimg.cc/pX8c8Jmj/game3.png" alt="Game 3 Icon">
-        <div class="game-card-info">
-          <div class="game-title-row"><span class="game-title">Game Name 3</span>
-          </div>
-          <div class="game-desc">Puzzle your mind with Game 3, the best logic and brain challenge for all ages.</div>
-          <div class="game-download-row">
-            <a href="#" class="btn game-download-btn" onclick="showGameDetails(game3Data); return false;">Download</a>
-          </div>
-          <!-- تعليق: عدل اسم اللعبة أو الصورة أو الوصف أو الدالة هنا -->
-        </div>
-      </div>
-      <!-- مثال على بطاقة لعبة 4 -->
-      <div class="game-card" data-title="Game Name 4">
-        <img class="game-icon" src="https://i.postimg.cc/N0Jj5bXb/game4.png" alt="Game 4 Icon">
-        <div class="game-card-info">
-          <div class="game-title-row">
-            <span class="game-title">Game Name 4</span>
-          </div>
-          <div class="game-desc">Game 4 combines stunning graphics with addictive gameplay. Join now and compete with friends!</div>
-          <div class="game-download-row">
-            <a href="#" class="btn game-download-btn" onclick="showGameDetails(game4Data); return false;">Download</a>
-          </div>
-          <!-- تعليق: عدل اسم اللعبة أو الصورة أو الوصف أو الدالة هنا -->
-        </div>
-      </div>
-    </div>
-    <!-- نتائج البحث تظهر هنا -->
-    <div class="game-cards-container" id="search-game-cards" style="display:none"></div>
+  <div class="menu-icon" onclick="openSidebar()">&#9776;</div>
+  <section class="hero">
+    <h1>Games Collection</h1>
   </section>
+  <!-- شريط البحث عن الألعاب -->
+  <div id="game-search-bar-container">
+    <form id="game-search-bar" autocomplete="off" onsubmit="event.preventDefault();">
+      <i class="fas fa-search"></i>
+      <input type="text" id="game-search-input" placeholder="Search for a game by name..." />
+    </form>
+  </div>
+  <!-- قائمة الألعاب: أضف لعبة جديدة بنسخ div التالي وتغيير البيانات -->
+  <div class="game-cards-container" id="all-game-cards" style="display: flex;">
+    <!-- لعبة: Subway Surfers -->
+    <div class="game-card" data-title="Subway Surfers">
+      <img class="game-icon" src="https://play-lh.googleusercontent.com/2hJxJv7Grj1qMTKZr9fE1k6wQF2lE6S3_7eB3oKQw9RjKZkEEhdnQd3fWn1kbr8F9w=w240-h480-rw" alt="Subway Surfers">
+      <div class="game-card-info">
+        <div class="game-title-row">
+          <span class="game-title">Subway Surfers</span>
+        </div>
+        <div class="game-desc">
+          Endless runner game! Run, dash, dodge and have fun in Subway Surfers.
+        </div>
+        <div class="game-download-row">
+          <!-- ملاحظة: يجب أن يكون اسم الملف مطابقًا للملف الموجود في المشروع -->
+          <a href="game-subway-surfers.html" class="btn game-download-btn">Details & Download</a>
+        </div>
+      </div>
+    </div>
+    <!-- لعبة 2: انسخ وغير البيانات عند إضافة لعبة جديدة -->
+    <div class="game-card" data-title="Game Name 2">
+      <img class="game-icon" src="https://i.postimg.cc/7hF6wK4P/game2.png" alt="Game 2 Icon">
+      <div class="game-card-info">
+        <div class="game-title-row">
+          <span class="game-title">Game Name 2</span>
+        </div>
+        <div class="game-desc">Enjoy the thrill of Game 2, packed with action and adventure.</div>
+        <div class="game-download-row">
+          <a href="game-name2.html" class="btn game-download-btn">Details & Download</a>
+        </div>
+      </div>
+    </div>
+    <!-- أضف ألعاب أخرى هنا بنفس الطريقة -->
+  </div>
   <!-- نتائج البحث ستظهر هنا (يملؤها جافاسكريبت) -->
   <div class="game-cards-container" id="search-game-cards" style="display:none"></div>
   <div class="footer">
@@ -110,6 +83,7 @@
     </div>
     <p>© 2025 Free Resources. All rights reserved.</p>
   </div>
+  <!-- ملف جافاسكريبت الموحد لجميع الصفحات -->
   <script src="script.js"></script>
 </body>
 </html>
