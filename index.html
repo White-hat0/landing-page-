@@ -4,85 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MediaFox | Home</title>
-  <!-- خطوط Google Fonts وأيقونات FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <!-- ملف CSS الموحد -->
-  <link rel="stylesheet" href="style.css">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <!-- الشريط الجانبي -->
+  <!-- قائمة جانبية وروابط -->
   <div class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <div class="logo-container">
-        <img src="https://i.postimg.cc/3r0JD7Fh/IMG-20250610-102321.png" alt="Media Fox Logo">
-      </div>
-      <div class="close-btn" onclick="closeSidebar()">×</div>
-    </div>
     <ul>
-      <!-- روابط إلى كل صفحة رئيسية -->
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="packs.html"><i class="fas fa-box"></i> Packs</a></li>
-      <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
-      <li><a href="transitions.html"><i class="fas fa-film"></i> Transitions</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <!-- أضف روابط باقي الصفحات هنا -->
     </ul>
   </div>
-
-  <!-- زر القائمة الجانبية (الهامبرغر) -->
-  <div class="menu-icon" onclick="openSidebar()">&#9776;</div>
-
-  <!-- البانر الرئيسي -->
+  <div class="menu-icon" onclick="openSidebar()">☰</div>
   <section class="hero">
     <h1>Where innovation meets your digital needs</h1>
   </section>
-
   <!-- البطاقات الرئيسية -->
   <section class="card-section">
-    <!-- بطاقة الباقات -->
-    <div class="card">
-      <img src="https://i.postimg.cc/zBvFg3XB/file-00000000bd4461f4a01ffb2a71df09fd-2.png.jpg" alt="Free Editing Packs">
-      <div class="card-content">
-        <h3>Free Editing Packs</h3>
-        <p>Download top-notch video editing packs to boost your creativity.</p>
-        <!-- انتقل لصفحة الباقات -->
-        <a href="packs.html" class="btn">View Packs</a>
-      </div>
-    </div>
     <!-- بطاقة الألعاب -->
     <div class="card">
       <img src="https://i.postimg.cc/3Jv0tVg8/game-icon.png" alt="Editing Apps">
       <div class="card-content">
         <h3>Editing Apps</h3>
         <p>Explore the best free apps to enhance your content production.</p>
-        <!-- انتقل لصفحة الألعاب -->
+        <!-- يجب أن ينتقل إلى صفحة الألعاب -->
         <a href="games.html" class="btn">View Games</a>
       </div>
     </div>
-    <!-- بطاقة الانتقالات والتعريفات -->
-    <div class="card">
-      <img src="رابط_الصورة_3.jpg" alt="Transitions & Intros">
-      <div class="card-content">
-        <h3>Transitions & Intros</h3>
-        <p>Get stylish video transitions and intros to wow your audience.</p>
-        <!-- انتقل لصفحة الانتقالات -->
-        <a href="transitions.html" class="btn">View Transitions</a>
-      </div>
-    </div>
+    <!-- أضف بطاقات أخرى هنا -->
   </section>
-
-  <!-- التذييل -->
-  <div class="footer">
-    <div class="footer-icons">
-      <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://t.me/username" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="https://www.tiktok.com/@username" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-    <p>© 2025 Free Resources. All rights reserved.</p>
-  </div>
-  <!-- ملف جافاسكريبت الموحد -->
   <script src="script.js"></script>
 </body>
 </html>
