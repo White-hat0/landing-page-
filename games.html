@@ -3,51 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Subway Surfers | Game Details</title>
+  <title>Games | MediaFox</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <button class="btn back-btn-top" style="background: #6C63FF;" onclick="window.location.href='games.html'">← Back to Games</button>
-  <section style="padding: 40px 10px 10px 10px; max-width: 800px; margin: 0 auto;">
-    <div style="display: flex; align-items: center; gap: 18px;">
-      <img src="https://play-lh.googleusercontent.com/2hJxJv7Grj1qMTKZr9fE1k6wQF2lE6S3_7eB3oKQw9RjKZkEEhdnQd3fWn1kbr8F9w=w240-h480-rw" alt="Game Icon" style="width: 70px; height: 70px; border-radius: 16px;">
-      <div>
-        <h2 style="color: #222; font-size: 24px;">Subway Surfers</h2>
-        <div style="color: #444; font-size: 15px;">SYBO Games</div>
-      </div>
-    </div>
-    <div style="display: flex; gap: 20px; padding-top: 18px;">
-      <div style="display:flex; align-items:center; gap:4px;">
-        <span style="color:#333; font-size:18px; font-weight:700;">4.1</span>
-        <i class="fa fa-star" style="color:#ffc107; font-size:17px;"></i>
-        <span style="color:#666; font-size:14px; margin-left:2px;">(37M)</span>
-      </div>
-      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
-        <i class="fa fa-download"></i> <span>120 MB</span>
-      </div>
-      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
-        <i class="fa fa-user"></i> <span>7+</span>
-      </div>
-      <div style="color:#666; font-size:15px; display:flex; align-items:center; gap:5px;">
-        <i class="fa fa-arrow-down"></i> <span>1B+</span>
-      </div>
-    </div>
-    <div style="padding: 30px 0 0 0;">
-      <a href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf" target="_blank" class="btn" style="width:100%; font-size:19px; padding:13px 0;">
-        تثبيت اللعبة
-      </a>
-    </div>
-    <div style="display:flex; gap:11px; padding: 32px 0 0 0;">
-      <img src="https://play-lh.googleusercontent.com/2hJxJv7Grj1qMTKZr9fE1k6wQF2lE6S3_7eB3oKQw9RjKZkEEhdnQd3fWn1kbr8F9w=w240-h480-rw" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px;">
-      <img src="https://play-lh.googleusercontent.com/c6H4VqD0nnt7aP5OQe0tfpOU6b_3bTR_9XKVyUkKcL5V8frQZ6Pp3y5WnT4wB9i3Cw=w240-h480-rw" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px;">
-      <img src="https://play-lh.googleusercontent.com/r7v8el4w3GTIuR7QhA6z63ipL7T6Xvn2zW4Z3m3rIh8pWc4J2zvXdmwRKvGQ9S7GKw=w240-h480-rw" alt="screenshot" style="width:31%; max-width:180px; border-radius:12px;">
-    </div>
-    <div style="background: #f5f5f5; border-radius: 20px 20px 0 0; margin-top:38px; padding: 32px 20px 46px 20px;">
-      <h3 style="color: #222; font-size: 20px;">About this game</h3>
-      <div style="color:#444; font-size: 16px; line-height:1.8;">
-        Subway Surfers is an endless runner mobile game. Run, dodge obstacles, collect coins, and unlock new characters in the world's most popular endless runner! Enjoy smooth controls and vibrant graphics in this addictive game.
-      </div>
-    </div>
+  <!-- الشريط الجانبي -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+    </ul>
+  </div>
+  <div class="menu-icon" onclick="openSidebar()">☰</div>
+  <section class="hero">
+    <h1>Games Collection</h1>
   </section>
+  <!-- شريط البحث -->
+  <div id="game-search-bar-container">
+    <form id="game-search-bar" autocomplete="off" onsubmit="event.preventDefault();">
+      <input type="text" id="game-search-input" placeholder="Search for a game by name..." />
+    </form>
+  </div>
+  <!-- قائمة الألعاب -->
+  <div class="game-cards-container" id="all-game-cards" style="display: flex;">
+    <!-- اللعبة 1 -->
+    <div class="game-card" data-title="Subway Surfers">
+      <img class="game-icon" src="https://play-lh.googleusercontent.com/2hJxJv7Grj1qMTKZr9fE1k6wQF2lE6S3_7eB3oKQw9RjKZkEEhdnQd3fWn1kbr8F9w=w240-h480-rw" alt="Subway Surfers">
+      <div class="game-card-info">
+        <span class="game-title">Subway Surfers</span>
+        <div class="game-desc">Endless runner game! Run, dash, dodge and have fun in Subway Surfers.</div>
+        <!-- رابط صفحة تفاصيل اللعبة -->
+        <a href="game-subway-surfers.html" class="btn game-download-btn">Details & Download</a>
+      </div>
+    </div>
+    <!-- اللعبة 2 -->
+    <div class="game-card" data-title="Game Name 2">
+      <img class="game-icon" src="https://i.postimg.cc/7hF6wK4P/game2.png" alt="Game 2">
+      <div class="game-card-info">
+        <span class="game-title">Game Name 2</span>
+        <div class="game-desc">Thrill of Game 2, packed with action and adventure.</div>
+        <a href="game-name2.html" class="btn game-download-btn">Details & Download</a>
+      </div>
+    </div>
+    <!-- أضف ألعاب أخرى هنا بنفس الطريقة -->
+  </div>
+  <!-- نتائج البحث (تظهر فقط عند البحث) -->
+  <div class="game-cards-container" id="search-game-cards" style="display:none"></div>
+  <script src="script.js"></script>
 </body>
 </html>
